@@ -2,77 +2,83 @@
 
 ## Project Overview
 
-This project focuses on building a metadata-driven data engineering and reporting platform using Microsoft Fabric.
+This project focuses on building a metadata-driven data ingestion and processing platform using Microsoft Fabric.
 
-The solution integrates data from REST APIs, processes it through a structured data pipeline, and organises it using the Medallion Architecture. The processed data is prepared for analytics and reporting.
+The solution integrates multiple REST API endpoints, automates data ingestion using configuration-driven processing, and organises data through the Medallion Architecture.
 
 ## Technologies Used
 
 - Microsoft Fabric
 - Python
 - PySpark
-- SQL
 - REST APIs
 - Delta Lake
 - Fabric Lakehouse
-- Data Pipelines
-- Power BI
+- Fabric Data Pipelines
 
 ## Project Architecture
 
-The project follows a metadata-driven approach and Medallion Architecture.
-
-### 1. Data Ingestion
-- Ingests data from REST API endpoints.
-- Uses configuration-driven API endpoint management.
-- Supports structured data ingestion into Microsoft Fabric.
+### 1. API Data Ingestion
+- Integrated multiple REST API endpoints.
+- Used configuration-driven API endpoint management.
+- Implemented API-based data extraction using Python.
 
 ### 2. Bronze Layer
-- Stores ingested raw data.
-- Maintains the initial version of source data.
-- Uses Delta Lake storage.
+- Ingested and stored raw API responses.
+- Maintained source data in the Bronze layer.
+- Used Delta Lake for data storage.
 
 ### 3. Silver Layer
-- Performs data cleaning and transformation using PySpark.
-- Handles duplicate records and data quality operations.
-- Stores structured and processed data.
+- Processed and cleaned raw data using PySpark.
+- Applied duplicate removal and data transformation.
+- Stored structured data as Delta tables.
 
 ### 4. Gold Layer
-- Prepares transformed data for analytical use.
-- Organises data for reporting and business insights.
+- Organised processed data for analytical consumption.
+- Prepared refined datasets for downstream reporting.
 
 ## Key Engineering Concepts
 
 - Metadata-driven data ingestion
 - REST API integration
-- Medallion Architecture
+- Python-based ETL
 - PySpark transformations
-- Delta Lake tables
-- Data pipeline orchestration
-- SQL-based analytics
-- Power BI reporting
+- Medallion Architecture
+- Delta Lake
+- Data Pipeline orchestration
 
 ## Project Workflow
 
-1. Configure API endpoints and ingestion metadata.
-2. Extract data from REST APIs.
-3. Load raw data into the Bronze layer.
-4. Clean and transform data in the Silver layer.
-5. Prepare analytical datasets in the Gold layer.
-6. Use the processed data for reporting and analytics.
+1. Configure API endpoints and metadata.
+2. Extract data from multiple REST APIs using Python.
+3. Ingest raw data into the Bronze layer.
+4. Clean and transform data using PySpark.
+5. Store processed data in the Silver layer.
+6. Prepare refined datasets in the Gold layer.
 
+## Repository Structure
+
+```text
+Multi-Tenant-SaaS-Reporting/
+│
+├── README.md
+├── notebooks/
+├── pipeline/
+├── data/
+└── screenshots/
+```
 
 ## Key Learnings
 
-- Building metadata-driven data pipelines.
-- Integrating REST APIs with Microsoft Fabric.
-- Working with PySpark and Delta Lake.
-- Implementing Medallion Architecture.
-- Understanding scalable data ingestion and transformation.
-- Preparing data for analytics and reporting.
+- Working with REST API integrations.
+- Building metadata-driven ingestion workflows.
+- Performing ETL operations using Python and PySpark.
+- Implementing Medallion Architecture in Microsoft Fabric.
+- Working with Delta Lake and Lakehouse storage.
+- Understanding automated data pipeline workflows.
 
 ---
 
 **Project Domain:** Data Engineering  
 **Platform:** Microsoft Fabric  
-**Focus:** REST APIs | Python | PySpark | SQL | Delta Lake | Data Pipelines | Power BI
+**Focus:** Python | PySpark | REST APIs | Delta Lake | ETL | Data Pipelines
